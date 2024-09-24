@@ -3,6 +3,7 @@ package view;
 import util.ErrorLogin;
 import util.TratamentoException;
 
+import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

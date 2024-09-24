@@ -2,6 +2,7 @@ package view;
 
 import controller.UsuarioController;
 import model.Usuario;
+import util.TratamentoException;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -86,7 +87,7 @@ public class UsuarioView {
         System.out.println("---------------------------------");
     }
 
-    private void telaRemoverUsuario(){
+    private void telaRemoverUsuario()  {
         Scanner ler = new Scanner(System.in);
         System.out.println("---------------------------------");
         System.out.print("ID: ");
