@@ -1,6 +1,7 @@
 package view;
 
 import util.ErrorLogin;
+import util.TratamentoException;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -62,8 +63,8 @@ public class InterfacePrograma {
                     Thread.sleep(500);
                 }
             }
-        } catch (ErrorLogin e){
-            System.err.println(e.getMessage());
+        } catch (ErrorLogin | TratamentoException e){
+            System.err.println("ERRO: "+e.getMessage()+"\nERRO ESPECIFICO: "+e.getCause());
             rodape();
         }
     }

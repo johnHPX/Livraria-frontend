@@ -141,6 +141,7 @@ public class UsuarioView {
                 System.err.println("VOCÊ DIGITOU UM VALOR INVALIDO\nDIGITE UM NÚMERO INTEIRO COM BASE NAS OPÇÕES DO MENU");
                 Thread.sleep(500);
                 System.out.println("---------------------------------");
+                ler.nextLine();
             }
         }
 

@@ -2,20 +2,18 @@ package controller;
 
 import model.Funcionario;
 import repository.FuncionarioRepository;
+import util.TratamentoException;
 
 public class FuncionarioController {
 
-    public Funcionario Logar(String login, String senha){
+    public Funcionario Logar(String login, String senha) throws TratamentoException {
         try{
             FuncionarioRepository fr = new FuncionarioRepository();
-            Funcionario f = fr.LoginFuncionario(login, senha);
+            Funcionario f  = fr.LoginFuncionario(login, senha);
             return f;
-        }catch (Exception e){
-            System.err.println("Error: "+e.getMessage()+"\nErro especifico: "+e.getCause());
-            return null;
+        }catch (TratamentoException e){
+            throw new util.TratamentoException(e.getMessage(), e.getCause());
         }
     }
-
-
 
 }
